@@ -17,7 +17,10 @@ $(document).ready(function () { //Дожидаемся загрузки всей
 		$('.image:even').fadeToggle('slow'); //Анимация медленного скрытия элемента
 	});
 
-	$('.list-item:eq(4)').on('click', function () {
-		$('.image:odd').animate();
+	$('.list-item:eq(4)').on('click', function () { //Другой способ создания анимации
+		$('.image:odd').animate({
+			opacity: 'toggle',
+			height: 'toggle'
+		}, 2000);
 	});
 }); 
